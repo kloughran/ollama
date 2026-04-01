@@ -4,4 +4,4 @@ alias ollama='docker exec -it ollama ollama'
 # To use Claude Code (requires an Anthropic API Key)
 alias claude='docker exec -it ollama claude'
 
-claude --dangerously-skip-permissions -p "hi"
+claude --dangerously-skip-permissions -p "say hi"

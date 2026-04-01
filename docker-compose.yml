@@ -5,12 +5,14 @@ services:
     environment:
       - ANTHROPIC_BASE_URL=http://localhost:11434
       - OLLAMA_NUM_CTX=32768
-      - ANTHROPIC_DEFAULT_HAIKU_MODEL=llama3.2
-      - ANTHROPIC_DEFAULT_SONNET_MODEL=llama3.2
-      - ANTHROPIC_DEFAULT_OPUS_MODEL=llama3.2
+      - ANTHROPIC_DEFAULT_HAIKU_MODEL=llama3.2:3b
+      - ANTHROPIC_DEFAULT_SONNET_MODEL=llama3.2:3b
+      - ANTHROPIC_DEFAULT_OPUS_MODEL=llama3.2:3b
       - ANTHROPIC_AUTH_TOKEN=ollama
       - ANTHROPIC_API_KEY=""
-      - CLAUDE_CODE_MODEL=llama3.2
+      - CLAUDE_CODE_MODEL=llama3.2:3b
+      - CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
+      - CLAUDE_CODE_ATTRIBUTION_HEADER=0
     ports:
       - "11434:11434"
     restart: unless-stopped

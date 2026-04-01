@@ -5,6 +5,7 @@ services:
     environment:
       - ANTHROPIC_BASE_URL=http://localhost:11434
       - ANTHROPIC_AUTH_TOKEN=ollama
+      - ANTHROPIC_API_KEY=""
       - CLAUDE_CODE_MODEL=llama3.2
     ports:
       - "11434:11434"

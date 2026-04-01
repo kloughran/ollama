@@ -6,11 +6,12 @@ RUN apt-get update && apt-get install -y curl gnupg && \
     apt-get install -y nodejs && \
     npm install -g @anthropic-ai/claude-code
 	
-RUN useradd -m claudeuser
-USER claudeuser
-WORKDIR /home/claudeuser
 
 COPY entrypoint.sh /entrypoint.sh 
 RUN chmod +x /entrypoint.sh 
+
+RUN useradd -m claudeuser
+USER claudeuser
+WORKDIR /home/claudeuser
 
 ENTRYPOINT ["/entrypoint.sh"]

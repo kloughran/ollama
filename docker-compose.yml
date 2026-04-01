@@ -2,6 +2,9 @@ services:
   ollama:
     build: .
     container_name: ollama
+    environment:
+      - ANTHROPIC_BASE_URL=http://localhost:11434
+      - ANTHROPIC_AUTH_TOKEN=ollama
     ports:
       - "11434:11434"
     restart: unless-stopped

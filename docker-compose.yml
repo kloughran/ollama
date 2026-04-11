@@ -12,7 +12,10 @@ services:
       - CLAUDE_CODE_MODEL=llama3.2:3b
       - CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
       - CLAUDE_CODE_ATTRIBUTION_HEADER=0
+      - CLAUDE_CODE_THEME=dark
       - HSA_OVERRIDE_GFX_VERSION=9.0.0
+    group_add:
+      - "109"
     devices:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri

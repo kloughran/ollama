@@ -13,6 +13,9 @@ services:
       - CLAUDE_CODE_MODEL=llama3.2:3b
       - CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
       - CLAUDE_CODE_ATTRIBUTION_HEADER=0
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
     ports:
       - "11434:11434"
     restart: unless-stopped

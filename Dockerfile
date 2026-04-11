@@ -1,4 +1,4 @@
-FROM ollama/ollama:rocm
+FROM ollama/ollama
 
 # Install Node.js and Claude Code
 RUN apt-get update && apt-get install -y curl gnupg && \
